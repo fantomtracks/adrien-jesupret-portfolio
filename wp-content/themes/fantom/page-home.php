@@ -7,6 +7,7 @@
  *
 */
 get_header(); // This fxn gets the header.php file and renders it ?>
+<p>toto</p>
 	<div id="primary" class="row-fluid">
 		<div id="content" role="main" class="span8">
 			<?php if ( have_posts() ) : 
@@ -18,7 +19,6 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 				?>
 
 					<article class="post">
-
 						<?php if (!is_front_page()) : // Only if this page is NOT being used as a home page, display the title ?>
 							<h1 class='title'>
 								<?php the_title(); // Display the page title ?>
@@ -46,8 +46,5 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 
 			<?php endif; // OK, I think that takes care of both scenarios (having a page or not having a page to show) ?>
 		</div><!-- #content .site-content -->
-		<div id="sidebar" role="sidebar" class="span4">
-			<?php get_sidebar(); // This will display whatever we have written in the sidebar.php file, according to admin widget settings ?>
-		</div><!-- #sidebar -->
 	</div><!-- #primary .content-area -->
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>
